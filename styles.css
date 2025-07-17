@@ -1,0 +1,232 @@
+body {
+  background: url('./banner.jpeg') center center/cover no-repeat, 
+              linear-gradient(135deg, #f3f4f8 0%, #b2e6fa 74%, #7dd3fc 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+#app {
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  border-radius: 24px;
+  max-width: 410px;
+  width: 100%;
+  min-width: 0;
+  padding: 38px 26px 28px 26px;
+  margin: 5vw 2vw;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  #app {
+    padding: 17px 3vw 17px 3vw;
+    max-width: 98vw;
+    margin: 3vw 1vw;
+    border-radius: 10px;
+  }
+}
+
+h1,
+h2 {
+  color: #2262b3;
+  margin-bottom: 18px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  display: block;
+  text-align: left;
+}
+
+label,
+.step h2,
+.step h1 {
+  display: block;
+  text-align: left;
+  margin-bottom: 7px;
+  color: #527191;
+  font-size: 1.08em;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  margin: 14px 0 18px 0;
+  padding: 12px 14px;
+  border: 1.5px solid #d4e4fa;
+  border-radius: 9px;
+  font-size: 1em;
+  font-family: inherit;
+  background: rgba(246, 250, 254, 0.8);
+  box-sizing: border-box;
+  display: block;
+  transition: box-shadow 0.15s, border 0.18s;
+  box-shadow: 0 1px 3px #bae6fd33;
+  outline: none;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border: 1.8px solid #277aff;
+  background: #f0f5ff;
+  box-shadow: 0 3px 11px #bae6fd70;
+}
+
+button {
+  background: linear-gradient(90deg, #277aff 70%, #5eead4 120%);
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 11px 28px;
+  border-radius: 8px;
+  font-size: 1.07em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-top: 10px;
+  box-shadow: 0 2px 10px #277aff28;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.19s, transform 0.12s;
+  outline: none;
+}
+
+button:hover,
+button:focus {
+  background: linear-gradient(90deg, #0479ff 80%, #259bad 100%);
+  box-shadow: 0 5px 18px #277aff2c;
+  transform: translateY(-2px) scale(1.045);
+}
+
+.step {
+  animation: fadeIn .5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(24px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+
+ul#prof-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul#prof-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  border-radius: 7px;
+  padding: 5px 4px;
+  background: transparent;
+  transition: background 0.18s;
+}
+
+ul#prof-list li:hover {
+  background: #e9f4fd;
+}
+.prof-pic {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  border: 2.5px solid #f3f4ff;
+  box-shadow: 0 2px 10px #bae6fd48;
+  background: #c9e5f3;
+}
+
+ul#prof-list a {
+  color: #277aff;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: color 0.18s;
+}
+ul#prof-list a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+#prof-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 9px;
+  padding: 5px 2px;
+}
+#prof-info img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #f1f5fa;
+  box-shadow: 0 2px 6px #bae6fd18;
+}
+#prof-info span {
+  font-size: 1.05em;
+  color: #2271d1;
+  font-weight: 600;
+}
+
+#thankyou a {
+  color: #277aff;
+  text-decoration: underline;
+  font-size: 1.08em;
+  font-weight: 500;
+}
+#thankyou a:hover {
+  color: #11193a;
+}
+
+textarea {
+  min-height: 80px;
+  max-height: 200px;
+}
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 7px;
+  border: 1.5px solid #d4e4fa;
+  margin-bottom: 14px;
+  margin-top: 2px;
+  font-size: 1em;
+  background: #f6faff;
+  color: #2563eb;
+}
+select:disabled {
+  background: #eef1f8;
+  color: #888;
+}
+
+
+@media (max-width: 600px) {
+  #app {
+    padding: 23px 7px 15px 7px;
+    border-radius: 12px;
+    margin: 6vw 0;
+    min-width: unset;
+    max-width: 99vw;
+  }
+}
+
+@media (max-width: 500px) {
+  h1, h2 {
+    font-size: 1.1em;
+  }
+  #prof-info span { font-size: 1em; }
+  button, input[type="text"], textarea {
+    font-size: .96em;
+    padding: 8px 11px;
+  }
+  .prof-pic { width: 30px; height: 30px; }
+  #prof-info img { width: 25px; height: 25px; }
+}
+
+@media (max-width: 375px) {
+  #app { padding: 7px 2px 12px 2px; }
+  h1, h2 { font-size: 1em; }
+  #thankyou a, input[type="text"], textarea, button { font-size: .93em; }
+}

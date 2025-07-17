@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gratuity Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Step 1: Welcome -->
+    <div id="welcome" class="step">
+      <h1>Welcome to the Gratuity Portal</h1>
+      <label>Enter your name to continue:</label><br>
+      <input type="text" id="username" placeholder="Your name"><br>
+      <button id="continueBtn">Continue</button>
+    </div>
+    <!-- Step 2: Select Professor -->
+<div id="prof-select" class="step" style="display:none;">
+  <h2>Select a Professor to Write a Testimonial</h2>
+  <label for="dept-select">Department:</label>
+  <select id="dept-select">
+    <option value="">Select Department</option>
+    <!-- Options added by JS -->
+  </select>
+  <ul id="prof-list"></ul>
+</div>
+
+    <!-- Step 3: Write Testimonial -->
+    <div id="testi-step" class="step" style="display:none;">
+      <h2>Write a Testimonial</h2>
+      <div id="prof-info"></div>
+      <textarea id="testimonial" rows="4" placeholder="Your testimonial"></textarea><br>
+      <button id="submitBtn">Submit</button>
+    </div>
+    <!-- Step 4: Thank You -->
+    <div id="thankyou" class="step" style="display:none;">
+      <h2>Thank you for your testimonial!</h2>
+      <a href="#" id="submitAnother">Submit another</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
